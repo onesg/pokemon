@@ -25,7 +25,7 @@
 <h6>FUNCIONALIDADES DO PROJETO</h6>
 
 - [x] CRUD;
-- [ ] Paginação de resultados;
+- [x] Paginação de resultados;
 - [x] HATEOAS;
 - [x] Configuração CORS;
 - [x] Content Negotiation (JSON, XML e YAML);
