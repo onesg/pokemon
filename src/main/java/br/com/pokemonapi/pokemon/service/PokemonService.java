@@ -3,9 +3,9 @@ package br.com.pokemonapi.pokemon.service;
 import br.com.pokemonapi.pokemon.model.PokemonModel;
 import br.com.pokemonapi.pokemon.repository.PokemonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class PokemonService {
@@ -17,8 +17,8 @@ public class PokemonService {
         return repository.findById(id).orElseThrow(() -> new Exception("Pokemon não encontrado."));
     }
 
-    public List<PokemonModel> findAll() {
-        return repository.findAll();
+    public Page<PokemonModel> findAll(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
     public PokemonModel save(PokemonModel pokemonModel) {

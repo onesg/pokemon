@@ -3,9 +3,9 @@ package br.com.pokemonapi.pokemon.service;
 import br.com.pokemonapi.pokemon.model.TreinadorModel;
 import br.com.pokemonapi.pokemon.repository.TreinadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class TreinadorService {
@@ -17,8 +17,8 @@ public class TreinadorService {
         return repository.findById(id).orElseThrow(() -> new Exception("Treinador não encontrado."));
     }
 
-    public List<TreinadorModel> findAll() {
-        return repository.findAll();
+    public Page<TreinadorModel> findAll(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
     public TreinadorModel save(TreinadorModel treinadorModel) {
