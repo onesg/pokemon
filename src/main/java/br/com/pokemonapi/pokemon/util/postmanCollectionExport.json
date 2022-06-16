@@ -1,0 +1,763 @@
+{
+	"info": {
+		"_postman_id": "52326cbb-8306-4e55-a5e7-8ffd4e07598a",
+		"name": "REST API TREINADOR-POKEMON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Treinador",
+			"item": [
+				{
+					"name": "XML",
+					"item": [
+						{
+							"name": "LIST ID OK",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/treinador/{ID}?mediaType=xml",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"treinador",
+										"{ID}"
+									],
+									"query": [
+										{
+											"key": "mediaType",
+											"value": "xml"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LIST ALL OK",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/treinador/?mediaType=xml",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"treinador",
+										""
+									],
+									"query": [
+										{
+											"key": "mediaType",
+											"value": "xml"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SAVE OK",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "<treinadorModel>\r\n    <nomeTreinador>teste</nomeTreinador>\r\n    <idadeTreinador>0</idadeTreinador>\r\n</treinadorModel>\r\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": "http://localhost:8081/treinador/"
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE OK",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "<treinadorModel>\r\n    <idTreinador>0</idTreinador>\r\n    <nomeTreinador>teste</nomeTreinador>\r\n    <idadeTreinador>0</idadeTreinador>\r\n</treinadorModel>\r\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": "http://localhost:8081/treinador/"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "YAML",
+					"item": [
+						{
+							"name": "LIST ID OK",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/treinador/{ID}?mediaType=yaml",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"treinador",
+										"{ID}"
+									],
+									"query": [
+										{
+											"key": "mediaType",
+											"value": "yaml"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LIST ALL OK",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/treinador/?mediaType=yaml",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"treinador",
+										""
+									],
+									"query": [
+										{
+											"key": "mediaType",
+											"value": "yaml"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SAVE OK",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true,
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-yaml",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/x-yaml",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "---\r\nnomeTreinador: teste\r\nidadeTreinador: 0\r\n",
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": "http://localhost:8081/treinador/"
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE OK",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true,
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-yaml",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/x-yaml",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "---\r\nidTreinador: 0\r\nnomeTreinador: teste\r\nidadeTreinador: 0\r\n",
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": "http://localhost:8081/treinador/"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "JSON",
+					"item": [
+						{
+							"name": "LIST ID OK",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/treinador/{ID}"
+							},
+							"response": []
+						},
+						{
+							"name": "LIST ALL OK",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/treinador/"
+							},
+							"response": []
+						},
+						{
+							"name": "SAVE OK",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nomeTreinador\": \"teste\",\r\n    \"idadeTreinador\": 0\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/treinador/"
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE OK",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idTreinador\": 0,\r\n    \"nomeTreinador\": \"teste\",\r\n    \"idadeTreinador\": 0\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/treinador/"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "LIST ALL OK (CORS TEST)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "(https://www.google.com.br) <<----- TIRAR PARENTESES",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/treinador/"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://localhost:8081/treinador/{ID}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pokemon",
+			"item": [
+				{
+					"name": "XML",
+					"item": [
+						{
+							"name": "LIST ID OK",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/pokemon/{ID}?mediaType=xml",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"pokemon",
+										"{ID}"
+									],
+									"query": [
+										{
+											"key": "mediaType",
+											"value": "xml"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LIST ALL OK",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/pokemon/?mediaType=xml",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"pokemon",
+										""
+									],
+									"query": [
+										{
+											"key": "mediaType",
+											"value": "xml"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SAVE OK",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "<PokemonModel>\r\n    <nomePokemon>teste</nomePokemon>\r\n    <tipoPokemon>teste</tipoPokemon>\r\n    <treinadorModel>\r\n        <idTreinador>0</idTreinador>\r\n    </treinadorModel>\r\n</PokemonModel>\r\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": "http://localhost:8081/pokemon/"
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE OK",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "<PokemonModel>\r\n    <idPokemon>0</idPokemon>\r\n    <nomePokemon>teste</nomePokemon>\r\n    <tipoPokemon>teste</tipoPokemon>\r\n</PokemonModel>\r\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": "http://localhost:8081/pokemon/"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "YAML",
+					"item": [
+						{
+							"name": "LIST ID OK",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/pokemon/{ID}?mediaType=yaml",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"pokemon",
+										"{ID}"
+									],
+									"query": [
+										{
+											"key": "mediaType",
+											"value": "yaml"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LIST ALL OK",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/pokemon/?mediaType=yaml",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"pokemon",
+										""
+									],
+									"query": [
+										{
+											"key": "mediaType",
+											"value": "yaml"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SAVE OK",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true,
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-yaml",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/x-yaml",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "---\r\nnomePokemon: teste\r\ntipoPokemon: teste\r\ntreinadorModel:\r\n  idTreinador: 0\r\n",
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": "http://localhost:8081/pokemon/"
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE OK",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true,
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-yaml",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/x-yaml",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "---\r\nidPokemon: 0\r\nnomePokemon: teste\r\ntipoPokemon: teste\r\n",
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": "http://localhost:8081/pokemon/"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "JSON",
+					"item": [
+						{
+							"name": "LIST ID OK",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/pokemon/{ID}"
+							},
+							"response": []
+						},
+						{
+							"name": "LIST ALL OK",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/pokemon/"
+							},
+							"response": []
+						},
+						{
+							"name": "SAVE OK",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"nomePokemon\": \"teste\",\r\n   \"tipoPokemon\": \"teste\",\r\n   \"treinadorModel\": {\r\n       \"idTreinador\": 0\r\n   }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/pokemon/"
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE OK",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"idPokemon\": 0,\r\n   \"nomePokemon\": \"teste\",\r\n   \"tipoPokemon\": \"teste\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/pokemon/"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "LIST ALL OK (CORS TEST)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "(https://www.google.com.br) <<----- TIRAR PARENTESES",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/pokemon/"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": "http://localhost:8081/pokemon/{ID}"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
